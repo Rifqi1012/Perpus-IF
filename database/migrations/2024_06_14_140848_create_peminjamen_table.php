@@ -14,14 +14,13 @@ return new class extends Migration
         Schema::create('peminjaman', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('kode_peminjaman');
-            $table->string('nim');
+            $table->foreignId('nim');
             $table->string('nama_mahasiswa');
             $table->integer('jumlah_buku_dipinjam');
             $table->date('tanggal_peminjaman');
             $table->date('tanggal_pengembalian');
-            $table->integer('no_hp');
-            $table->integer('no_darurat');
+            $table->string('no_hp');
+            $table->string('no_darurat');
             $table->string('nama_penjaga');
         });
     }
