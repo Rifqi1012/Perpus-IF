@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('peminjaman', function (Blueprint $table) {
+        Schema::create('peminjaman_skripsi', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('nim');
+            $table->foreignId('skripsi_id');
             $table->string('nama_mahasiswa');
-            $table->integer('jumlah_buku_dipinjam');
             $table->date('tanggal_peminjaman');
             $table->date('tanggal_pengembalian');
             $table->string('no_hp');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('peminjaman');
+        Schema::dropIfExists('peminjaman_skripsi');
     }
 };

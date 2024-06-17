@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('judul_skripsi');
             $table->string('nama_penulis');
             $table->string('dosen_pembimbing');
-            $table->dateTime('tahun_rilis');
+            $table->date('tahun_rilis');
         });
     }
 
